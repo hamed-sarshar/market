@@ -90,22 +90,22 @@ const NavBar = () => {
                             </DrawerHeader>
                             <Divider/>
                             <List onClick={handleDrawerClose}>
-                                <ListItem component={Link} to="/" style={{display: "block", textAlign: "center"}}>
+                                <ListItem component={Link} to="/market" style={{display: "block", textAlign: "center"}}>
                                     <img src={LogoMobile} alt="بوفه گلریز"/>
                                 </ListItem>
-                                <ListItem component={Link} to="/" sx={{color: 'inherit', display: 'flexGrow'}}>
+                                <ListItem component={Link} to="/market" sx={{color: 'inherit', display: 'flexGrow'}}>
                                     <ListItemIcon sx={{minWidth: 40}}>
                                         <StoreIcon/>
                                     </ListItemIcon>
                                     <ListItemText sx={{textAlign: 'right'}} primary="صفحه اصلی"/>
                                 </ListItem>
-                                <ListItem component={Link} to="/buys" sx={{color: 'inherit', display: 'flexGrow'}}>
+                                <ListItem component={Link} to="/market/buys" sx={{color: 'inherit', display: 'flexGrow'}}>
                                     <ListItemIcon sx={{minWidth: 40}}>
                                         <ShoppingBasketIcon/>
                                     </ListItemIcon>
                                     <ListItemText sx={{textAlign: 'right'}} primary="خرید شده"/>
                                 </ListItem>
-                                <ListItem component={Link} to="/archives" sx={{color: 'inherit', display: 'flexGrow'}}>
+                                <ListItem component={Link} to="/market/archives" sx={{color: 'inherit', display: 'flexGrow'}}>
                                     <ListItemIcon sx={{minWidth: 40}}>
                                         <Inventory2Icon/>
                                     </ListItemIcon>
@@ -116,13 +116,13 @@ const NavBar = () => {
                         </Drawer>
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
-                        <Button component={Link} to="/" sx={{my: 2, color: 'white', display: 'block'}}>
+                        <Button component={Link} to="/market" sx={{my: 2, color: 'white', display: 'block'}}>
                             صفحه اصلی
                         </Button>
-                        <Button component={Link} to="/buys" sx={{my: 2, color: 'white', display: 'block'}}>
+                        <Button component={Link} to="/market/buys" sx={{my: 2, color: 'white', display: 'block'}}>
                             خرید شده
                         </Button>
-                        <Button component={Link} to="/archives" sx={{my: 2, color: 'white', display: 'block'}}>
+                        <Button component={Link} to="/market/archives" sx={{my: 2, color: 'white', display: 'block'}}>
                             آرشیو شده
                         </Button>
                     </Box>
