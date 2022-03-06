@@ -58,9 +58,9 @@ export default function App(props) {
                 <NavBar/>
                 <span id="back-to-top-anchor"/>
                     <Routes>
-                        <Route path="/market" element={<Home/>}/>
-                        <Route path="/market/buys" element={<Buys/>}/>
-                        <Route path="/market/archives" element={<Archives/>}/>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/buys" element={<Buys/>}/>
+                        <Route path="/archives" element={<Archives/>}/>
                         <Route path="/notFound" element={<NotFound/>}/>
                         <Route path="*" element={<NotFound/>}/>
                     </Routes>
