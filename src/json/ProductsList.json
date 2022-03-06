@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "imgSrc": "../assets/images/product/bato-60grem-secret.png",
+    "imgSrc": "market/assets/images/product/bato-60grem-secret.png",
     "name": "چیپس باربیکیو 60 گرمی",
     "title": "",
     "price": 5400
   },
   {
     "id": 2,
-    "imgSrc": "../assets/images/product/copo-3-in-1.png",
+    "imgSrc": "market/assets/images/product/copo-3-in-1.png",
     "name": "قهوه کلاسیک کیسه‌ای",
     "title": "",
     "price": 2300
@@ -29,49 +29,49 @@
   },
   {
     "id": 5,
-    "imgSrc": "../assets/images/product/mzmz-35grem.png",
+    "imgSrc": "market/assets/images/product/mzmz-35grem.png",
     "name": "مغز تخمه هندوانه 35 گرمی",
     "title": "",
     "price": 8000
   },
   {
     "id": 6,
-    "imgSrc": "../assets/images/product/mzmz-35grem-ser.png",
+    "imgSrc": "market/assets/images/product/mzmz-35grem-ser.png",
     "name": "مغز تخمه سرکه‌ای 35 گرمی",
     "title": "",
     "price": 5400
   },
   {
     "id": 7,
-    "imgSrc": "../assets/images/product/bato-felfely-60gram.png",
+    "imgSrc": "market/assets/images/product/bato-felfely-60gram.png",
     "name": "چیپس فلفلی 60 گرمی باتو",
     "title": "",
     "price": 5400
   },
   {
     "id": 8,
-    "imgSrc": "../assets/images/product/keranchey-tond-75gram.png",
+    "imgSrc": "market/assets/images/product/keranchey-tond-75gram.png",
     "name": "کرانچی فلفلی 75 گرمی",
     "title": "",
     "price": 7200
   },
   {
     "id": 9,
-    "imgSrc": "../assets/images/product/chetooz-limo-65gram.png",
+    "imgSrc": "market/assets/images/product/chetooz-limo-65gram.png",
     "name": "چیپس برگه‌ای لیمو 60 گرمی",
     "title": "",
     "price": 5400
   },
   {
     "id": 10,
-    "imgSrc": "../assets/images/product/shokolat-18gram-sade.png",
+    "imgSrc": "market/assets/images/product/shokolat-18gram-sade.png",
     "name": "شکلات مغزدار تکنیک 18 گرمی",
     "title": "",
     "price": 1500
   },
   {
     "id": 11,
-    "imgSrc": "../assets/images/product/shokolat-18gram-shokolati.png",
+    "imgSrc": "market/assets/images/product/shokolat-18gram-shokolati.png",
     "name": "شکلات مغزدار جت 18 گرمی",
     "title": "با روکش کاکائویی",
     "price": 1500
