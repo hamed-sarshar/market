@@ -62,7 +62,7 @@ const NavBar = () => {
             <Container maxWidth="xxl">
                 <Toolbar disableGutters>
                     <Typography sx={{mx: 2, display: {xs: 'none', md: 'flex'}}}>
-                        <Link to="/" style={{display: "flex"}}><img src={Logo} alt="بوفه گلریز"/></Link>
+                        <Link to="/market" style={{display: "flex"}}><img src={Logo} alt="بوفه گلریز"/></Link>
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
