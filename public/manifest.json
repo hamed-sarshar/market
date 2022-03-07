@@ -4,62 +4,62 @@
   "description": "مدیریت صورت حساب خرید شده از بوفه گلریز",
   "icons": [
     {
-      "src": "market/assets/images/favicon/favicon.ico",
+      "src": "/market/assets/images/favicon/favicon.ico",
       "sizes": "32x32",
       "type": "image/x-icon"
     },
     {
-      "src": "market/assets/images/logo/logo.png",
+      "src": "/market/assets/images/logo/logo.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "market/assets/images/logo/logo48.png",
+      "src": "/market/assets/images/logo/logo48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
     {
-      "src": "market/assets/images/logo/logo64.png",
+      "src": "/market/assets/images/logo/logo64.png",
       "type": "image/png",
       "sizes": "64x64"
     },
     {
-      "src": "market/assets/images/logo/logo72.png",
+      "src": "/market/assets/images/logo/logo72.png",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "market/assets/images/logo/logo96.png",
+      "src": "/market/assets/images/logo/logo96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "market/assets/images/logo/logo144.png",
+      "src": "/market/assets/images/logo/logo144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "market/assets/images/logo/logo168.png",
+      "src": "/market/assets/images/logo/logo168.png",
       "type": "image/png",
       "sizes": "168x168"
     },
     {
-      "src": "market/assets/images/logo/logo192.png",
+      "src": "/market/assets/images/logo/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "market/assets/images/logo/logo256.png",
+      "src": "/market/assets/images/logo/logo256.png",
       "type": "image/png",
       "sizes": "256x256"
     },
     {
-      "src": "market/assets/images/logo/logo512.png",
+      "src": "/market/assets/images/logo/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/market",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
