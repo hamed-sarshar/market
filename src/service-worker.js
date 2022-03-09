@@ -72,21 +72,21 @@ self.addEventListener('message', (event) => {
 // Any other custom service worker logic can go here.
 
 const fileCache = [
-    'market/assets/images/favicon/favicon.ico',
-    'market/assets/images/favicon/favicon-32x32.png',
-    'market/assets/images/favicon/favicon-16x16.png',
-    'market/service-worker.js',
-    'market/manifest.json',
-    'market/assets/images/logo/logo144.png',
-    'market/assets/images/product/bato-60grem-secret.png',
-    'market/assets/images/product/bato-felfely-60gram.png',
-    'market/assets/images/product/chetooz-limo-65gram.png',
-    'market/assets/images/product/copo-3-in-1.png',
-    'market/assets/images/product/keranchey-tond-75gram.png',
-    'market/assets/images/product/mzmz-35grem.png',
-    'market/assets/images/product/mzmz-35grem-ser.png',
-    'market/assets/images/product/shokolat-18gram-sade.png',
-    'market/assets/images/product/shokolat-18gram-shokolati.png',
+    '/market/assets/images/favicon/favicon.ico',
+    '/market/assets/images/favicon/favicon-32x32.png',
+    '/market/assets/images/favicon/favicon-16x16.png',
+    '/market/service-worker.js',
+    '/market/manifest.json',
+    '/market/assets/images/logo/logo144.png',
+    '/market/assets/images/product/bato-60grem-secret.png',
+    '/market/assets/images/product/bato-felfely-60gram.png',
+    '/market/assets/images/product/chetooz-limo-65gram.png',
+    '/market/assets/images/product/copo-3-in-1.png',
+    '/market/assets/images/product/keranchey-tond-75gram.png',
+    '/market/assets/images/product/mzmz-35grem.png',
+    '/market/assets/images/product/mzmz-35grem-ser.png',
+    '/market/assets/images/product/shokolat-18gram-sade.png',
+    '/market/assets/images/product/shokolat-18gram-shokolati.png',
 ];
 
 const cacheName = 'DATA-CACHE';
