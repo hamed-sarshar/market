@@ -21,7 +21,7 @@ const Archives = () => {
     )
 
     const showDataArchive = (props) => {
-        window.open(`/showArchive/${props.id}`, "_self");
+        window.open(`/market/showArchive/${props.id}`, "_self");
     }
 
     return (
