@@ -20,10 +20,10 @@ const Home = () => {
             await db.listCardShops.add({
                 imgSrc, name, title, price, dateBuy
             })
-            enqueueSnackbar(`${props.name} با قیمت ${props.price.toLocaleString()} تومان به سبد خرید افزوده شد`, {variant: "success"});
+            enqueueSnackbar(`${props.name} به سبد خرید افزوده شد  `, {variant: "success"});
 
         } catch {
-            enqueueSnackbar(`${props.name} با قیمت ${props.price.toLocaleString()} تومان به سبد خرید افزوده نشد`, {variant: "error"});
+            enqueueSnackbar(`${props.name} به سبد خرید افزوده نشد `, {variant: "error"});
         }
     }
 
@@ -33,8 +33,7 @@ const Home = () => {
                 <Grid container spacing={{xs: 2, md: 3}}>
                     {ProductsList.map((productDetail, index) => (
                         <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
-                            <Product key={index} data={productDetail} index={index}
-                                     handleOpenAddToCard={handleOpenAddToCard}/>
+                            <Product key={index} data={productDetail} index={index} handleOpenAddToCard={handleOpenAddToCard}/>
                         </Grid>
                     ))}
                 </Grid>

@@ -6,6 +6,7 @@ import { Routes, Route} from "react-router-dom";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Buys from "./components/Buys";
 import Archives from "./components/Archives";
+import ShowArchive from "./components/ShowArchive";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import {Zoom, Box, Fab} from "@mui/material";
@@ -54,13 +55,14 @@ ScrollTop.propTypes = {
 export default function App(props) {
     return (
         <React.Fragment>
-            <SnackbarProvider maxSnack={3}>
+            <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
                 <NavBar/>
                 <span id="back-to-top-anchor"/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/buys" element={<Buys/>}/>
                         <Route path="/archives" element={<Archives/>}/>
+                        <Route path="/showArchive/:idArchive" element={<ShowArchive/>}/>
                         <Route path="/notFound" element={<NotFound/>}/>
                         <Route path="*" element={<NotFound/>}/>
                     </Routes>

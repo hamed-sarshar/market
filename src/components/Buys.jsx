@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
-import {List, ListItemAvatar} from "@mui/material";
+import {List, ListItemAvatar, Skeleton} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import NoProduct from "../images/product/noproduct.png";
@@ -18,20 +18,23 @@ import Button from "@mui/material/Button";
 
 const Buys = () => {
     const {enqueueSnackbar} = useSnackbar();
-    console.log("test");
+    const [loaded, setLoaded] = useState(false);
+
     const listBuys = useLiveQuery(
         async () => {
-            return await db.listCardShops.toArray();
+            const buy = await db.listCardShops.toArray();
+            setLoaded(true);
+            return buy;
         }
     )
 
     const deleteProduct = async (props) => {
         try {
             await db.listCardShops.delete(props.id);
-            enqueueSnackbar(`${props.name} با قیمت ${props.price.toLocaleString()} تومان از سبدخرید شما حذف شد.`, {variant: "success"});
+            enqueueSnackbar(`${props.name} از سبدخرید شما حذف شد. `, {variant: "success"});
         }
         catch {
-            enqueueSnackbar(`${props.name} با قیمت ${props.price.toLocaleString()} تومان از سبدخرید شما حذف نشد.`, {variant: "error"})
+            enqueueSnackbar(`${props.name} از سبدخرید شما حذف نشد. `, {variant: "error"})
         }
     }
 
@@ -67,14 +70,22 @@ const Buys = () => {
                     </Typography>
                 ) : (
                     <React.Fragment>
-                        <Grid container>
+                        <Grid container marginBottom={2}>
                             <Grid item xs={6}>
-                                <Typography variant="subtitle1" sx={{marginBottom: 1}}> جمع خرید‌ها
-                                    : {sumListBuys?.toLocaleString()} <Typography variant="caption"> تومان</Typography>
-                                </Typography>
+                                {loaded ? (
+                                    <Typography variant="subtitle1" sx={{marginBottom: 1}}> جمع خرید‌ها
+                                        : {sumListBuys?.toLocaleString()} <Typography variant="caption"> تومان</Typography>
+                                    </Typography>
+                                ) : (
+                                    <Skeleton animation="wave" variant="text" width="40%"/>
+                                )}
                             </Grid>
                             <Grid item xs={6} textAlign="left">
-                                <Button onClick={archiveListBuys} variant="outlined">آرشیو کردن این ماه</Button>
+                                {loaded ? (
+                                    <Button onClick={archiveListBuys} variant="outlined">آرشیو کردن این ماه</Button>
+                                ) : (
+                                    <Skeleton animation="wave" variant="text" width="40%" style={{float: "left"}}/>
+                                )}
                             </Grid>
                         </Grid>
                         <List>
@@ -86,34 +97,62 @@ const Buys = () => {
                                         >
                                             <ListItemAvatar>
                                                 <Avatar>
-                                                    <img style={{width: "100%", height: "100%", objectFit: 'contain'}}
-                                                         src={productDetail.imgSrc ? productDetail.imgSrc : NoProduct}
-                                                         alt="product"/>
+                                                    {
+                                                        loaded ? (
+                                                            <img style={{width: "100%", height: "100%", objectFit: 'contain'}}
+                                                                 src={productDetail.imgSrc ? productDetail.imgSrc : NoProduct}
+                                                                 alt="product"/>
+                                                        ) : (
+                                                            <Skeleton animation="wave" variant="circular" width={40} height={40} />
+                                                        )
+                                                    }
+
                                                 </Avatar>
                                             </ListItemAvatar>
                                             <ListItemText
                                                 primary={
                                                     <React.Fragment>
-                                                        <Typography variant="inherit" textAlign="right">
-                                                            {productDetail.name}
-                                                        </Typography>
+                                                        {
+                                                            loaded ? (
+                                                                    <Typography variant="inherit" textAlign="right">
+                                                                        {productDetail.name}
+                                                                    </Typography>
+                                                                )
+                                                                : (
+                                                                    <Skeleton animation="wave" variant="text" width="85%"/>
+                                                                )
+                                                        }
                                                     </React.Fragment>
                                                 }
                                                 secondary={
-                                                    <React.Fragment>
-                                                        <Typography component="span" display="block" textAlign="right" className="IRANSans">
-                                                            {getPersianDateTime(productDetail.dateBuy)}
-                                                        </Typography>
-                                                        <Typography component="span" display="block" textAlign="right">
-                                                            {productDetail.price.toLocaleString()} تومان
-                                                        </Typography>
-                                                    </React.Fragment>
+                                                    loaded ? (
+                                                        <React.Fragment>
+                                                            <Typography component="span" display="block" textAlign="right" className="IRANSans">
+                                                                {getPersianDateTime(productDetail.dateBuy)}
+                                                            </Typography>
+                                                            <Typography component="span" display="block" textAlign="right">
+                                                                {productDetail.price.toLocaleString()} تومان
+                                                            </Typography>
+                                                        </React.Fragment>
+                                                    ) : (
+                                                            <React.Fragment>
+                                                                <Skeleton animation="wave" width="70%" variant="text"/>
+                                                                <Skeleton animation="wave" width="50%" variant="text"/>
+                                                            </React.Fragment>
+                                                        )
+
                                                 }
                                             />
-                                            <IconButton edge="end" aria-label="delete"
-                                                        onClick={() => deleteProduct(productDetail)}>
-                                                <DeleteIcon/>
-                                            </IconButton>
+                                            {
+                                                loaded ? (
+                                                    <IconButton edge="end" aria-label="delete"
+                                                                onClick={() => deleteProduct(productDetail)}>
+                                                        <DeleteIcon/>
+                                                    </IconButton>
+                                                ) : (
+                                                    <Skeleton animation="wave" variant="circular" width={20} height={20} />
+                                                )
+                                            }
                                         </ListItem>
                                     </Grid>
                                 ))}
