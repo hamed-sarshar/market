@@ -125,6 +125,12 @@ const NavBar = () => {
                         <Button component={Link} to="/market/archives" sx={{my: 2, color: 'white', display: 'block'}}>
                             آرشیو شده
                         </Button>
+                        <Button component={Link} to="/market/test" sx={{my: 2, color: 'white', display: 'block'}}>
+                            آیسشبسشیب
+                        </Button>
+                        <Button component={Link} to="/market/showArchive" sx={{my: 2, color: 'white', display: 'block'}}>
+                            آیسasdfadشبسشیب
+                        </Button>
                     </Box>
 
                     <Box sx={{flexGrow: 0}}>
