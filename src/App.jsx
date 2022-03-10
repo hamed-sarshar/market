@@ -56,15 +56,17 @@ ScrollTop.propTypes = {
 export default function App(props) {
     return (
         <React.Fragment>
-            <Routes>
-                <Route path="/market/" element={<Home/>}/>
-                        <Route path="/market/buys" element={<Buys/>}/>
-                        <Route path="/market/archives" element={<Archives/>}/>
-                        <Route path="/market/showArchive" element={<ShowArchive/>}/>
-                        <Route path="/market/test" element={<Test/>}/>
-                        <Route path="/market/notFound" element={<NotFound/>}/>
-                        <Route path="*" element={<NotFound/>}/>
-                    </Routes>
+            <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
+                <Routes>
+                    <Route path="/market/" element={<Home/>}/>
+                            <Route path="/market/buys" element={<Buys/>}/>
+                            <Route path="/market/archives" element={<Archives/>}/>
+                            <Route path="/market/showArchive" element={<ShowArchive/>}/>
+                            <Route path="/market/test" element={<Test/>}/>
+                            <Route path="/market/notFound" element={<NotFound/>}/>
+                            <Route path="*" element={<NotFound/>}/>
+                        </Routes>
+            </SnackbarProvider>
         </React.Fragment>
         // <React.Fragment>
         //     <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
