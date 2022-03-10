@@ -37,7 +37,7 @@ const Archives = () => {
                                         {
                                             loaded ? (
                                                 // <Link href={`/market/showArchive`} sx={{textDecoration: 'none'}}>
-                                                    <ListItemButton component={Link} to={`/market/showArchive/${listArchive.id}`} sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
+                                                    <ListItem component={Link} to={`/market/showArchive/${listArchive.id}`} sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
                                                         <ListItemText primary={
                                                             <React.Fragment>
                                                                 <Typography variant="inherit" textAlign="right" className="IRANSans" sx={{marginBottom: 1}}>
@@ -55,7 +55,7 @@ const Archives = () => {
                                                                           </React.Fragment>
                                                                       }
                                                         />
-                                                    </ListItemButton>
+                                                    </ListItem>
                                                 // </Link>
                                             ) : (
                                                 <ListItem
