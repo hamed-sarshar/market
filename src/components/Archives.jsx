@@ -36,7 +36,7 @@ const Archives = () => {
                                     <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
                                         {
                                             loaded ? (
-                                                <Link href={`/showArchive/${listArchive.id}`} sx={{textDecoration: 'none'}}>
+                                                <Link href={`/market/showArchive/${listArchive.id}`} sx={{textDecoration: 'none'}}>
                                                     <ListItemButton sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
                                                         <ListItemText primary={
                                                             <React.Fragment>
