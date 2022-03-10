@@ -63,7 +63,7 @@ const Buys = () => {
         <Container maxWidth="xl" sx={{my: 3, pt: 2}}>
             {
                 listBuys?.length === 0 ? (
-                    <Typography component="div" textAlign="center">
+                    <Typography component="div" textAlign="center" sx={{backgroundColor: "red"}}>
                         <Typography variant="h5" sx={{marginBottom: 1}}>در سبد خرید شما هیچ محصولی برای نمایش وجود
                             ندارد.</Typography>
                         <RemoveShoppingCartIcon fontSize="large" color="action" style={{fontSize: "20rem"}}/>
