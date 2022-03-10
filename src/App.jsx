@@ -55,26 +55,37 @@ ScrollTop.propTypes = {
 
 export default function App(props) {
     return (
-        <React.Fragment>
-            <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
-                <NavBar/>
-                <span id="back-to-top-anchor"/>
-                    <Routes>
-                        <Route path="/market/" element={<ShowArchive/>}/>
+        <div>
+            <Routes>
+                <Route path="/market/" element={<Home/>}/>
                         <Route path="/market/buys" element={<Buys/>}/>
                         <Route path="/market/archives" element={<Archives/>}/>
                         <Route path="/market/showArchive" element={<ShowArchive/>}/>
                         <Route path="/market/test" element={<Test/>}/>
-                        {/* <Route path="/market/notFound" element={<NotFound/>}/>
-                        <Route path="*" element={<NotFound/>}/> */}
+                        <Route path="/market/notFound" element={<NotFound/>}/>
+                        <Route path="*" element={<NotFound/>}/>
                     </Routes>
-                <Footer/>
-                <ScrollTop {...props}>
-                    <Fab color="secondary" size="small" aria-label="scroll back to top">
-                        <KeyboardArrowUpIcon />
-                    </Fab>
-                </ScrollTop>
-            </SnackbarProvider>
-        </React.Fragment>
+        </div>
+        // <React.Fragment>
+        //     <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
+        //         <NavBar/>
+        //         <span id="back-to-top-anchor"/>
+        //             {/* <Routes>
+        //                 <Route path="/market/" element={<Home/>}/>
+        //                 <Route path="/market/buys" element={<Buys/>}/>
+        //                 <Route path="/market/archives" element={<Archives/>}/>
+        //                 <Route path="/market/showArchive" element={<ShowArchive/>}/>
+        //                 <Route path="/market/test" element={<Test/>}/>
+        //                 <Route path="/market/notFound" element={<NotFound/>}/>
+        //                 <Route path="*" element={<NotFound/>}/>
+        //             </Routes> */}
+        //         <Footer/>
+        //         <ScrollTop {...props}>
+        //             <Fab color="secondary" size="small" aria-label="scroll back to top">
+        //                 <KeyboardArrowUpIcon />
+        //             </Fab>
+        //         </ScrollTop>
+        //     </SnackbarProvider>
+        // </React.Fragment>
     );
 }
