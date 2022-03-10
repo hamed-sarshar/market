@@ -2,7 +2,7 @@ import React from 'react';
 import "./css/Style.sass";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import { Routes, Route, Router} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Buys from "./components/Buys";
 import Archives from "./components/Archives";
@@ -59,9 +59,8 @@ export default function App(props) {
             <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
                 <NavBar/>
                 <span id="back-to-top-anchor"/>
-                    <Router>
                     <Routes>
-                        <Route path="/market/" element={<Home/>}/>
+                        <Route path="/market/" element={<ShowArchive/>}/>
                         <Route path="/market/buys" element={<Buys/>}/>
                         <Route path="/market/archives" element={<Archives/>}/>
                         <Route path="/market/showArchive" element={<ShowArchive/>}/>
@@ -69,7 +68,6 @@ export default function App(props) {
                         {/* <Route path="/market/notFound" element={<NotFound/>}/>
                         <Route path="*" element={<NotFound/>}/> */}
                     </Routes>
-                    </Router>
                 <Footer/>
                 <ScrollTop {...props}>
                     <Fab color="secondary" size="small" aria-label="scroll back to top">
