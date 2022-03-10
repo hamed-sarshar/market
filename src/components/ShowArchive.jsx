@@ -20,7 +20,7 @@ const ShowArchive = () => {
 
     const listArchive = useLiveQuery(
         async () => {
-            const archive = await db.archiveListCardShops.where({id: parseInt(idArchive)}).first();
+            const archive = await db.archiveListCardShops.where({id: 1}).first();
             setLoaded(true);
             return archive;
         }
