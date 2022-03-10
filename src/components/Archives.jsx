@@ -36,8 +36,8 @@ const Archives = () => {
                                     <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
                                         {
                                             loaded ? (
-                                                <Link href={`/market/showArchive`} sx={{textDecoration: 'none'}}>
-                                                    <ListItemButton sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
+                                                // <Link href={`/market/showArchive`} sx={{textDecoration: 'none'}}>
+                                                    <ListItemButton component={Link} to={`/market/showArchive/${listArchive.id}`} sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
                                                         <ListItemText primary={
                                                             <React.Fragment>
                                                                 <Typography variant="inherit" textAlign="right" className="IRANSans" sx={{marginBottom: 1}}>
@@ -56,7 +56,7 @@ const Archives = () => {
                                                                       }
                                                         />
                                                     </ListItemButton>
-                                                </Link>
+                                                // </Link>
                                             ) : (
                                                 <ListItem
                                                     sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
