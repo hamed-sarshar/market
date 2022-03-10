@@ -55,7 +55,7 @@ ScrollTop.propTypes = {
 
 export default function App(props) {
     return (
-        <div>
+        <React.Fragment>
             <Routes>
                 <Route path="/market/" element={<Home/>}/>
                         <Route path="/market/buys" element={<Buys/>}/>
@@ -65,7 +65,7 @@ export default function App(props) {
                         <Route path="/market/notFound" element={<NotFound/>}/>
                         <Route path="*" element={<NotFound/>}/>
                     </Routes>
-        </div>
+        </React.Fragment>
         // <React.Fragment>
         //     <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
         //         <NavBar/>
