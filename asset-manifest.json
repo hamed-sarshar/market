@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/market/static/css/main.e0a639a7.css",
-    "main.js": "/market/static/js/main.953cd608.js",
+    "main.js": "/market/static/js/main.97b56867.js",
     "static/js/377.162d891a.chunk.js": "/market/static/js/377.162d891a.chunk.js",
     "service-worker.js": "/market/service-worker.js",
     "static/media/noproduct.png": "/market/static/media/noproduct.4c5cdc0aa47eff531fd9.png",
     "static/media/IRANSans_FaNum.woff": "/market/static/media/IRANSans_FaNum.4f3bc2683ce6d8e34dd7.woff",
     "index.html": "/market/index.html",
     "main.e0a639a7.css.map": "/market/static/css/main.e0a639a7.css.map",
-    "main.953cd608.js.map": "/market/static/js/main.953cd608.js.map",
+    "main.97b56867.js.map": "/market/static/js/main.97b56867.js.map",
     "377.162d891a.chunk.js.map": "/market/static/js/377.162d891a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0a639a7.css",
-    "static/js/main.953cd608.js"
+    "static/js/main.97b56867.js"
   ]
 }
