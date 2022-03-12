@@ -5,7 +5,7 @@ import {db} from "./utilities/db";
 import Typography from "@mui/material/Typography";
 import ArchiveIcon from '@mui/icons-material/Archive';
 import Grid from "@mui/material/Grid";
-import {List, ListItem, Button, Skeleton} from "@mui/material";
+import {List, ListItem, Button, Skeleton, ListItemButton} from "@mui/material";
 import {Link} from "react-router-dom";
 import ListItemText from "@mui/material/ListItemText";
 import {getPersianDateTime} from "../utils/DateTimeUtils";
@@ -38,7 +38,7 @@ const Archives = () => {
                                         {
                                             loaded ? (
                                                 // <Link href={`/market/showArchive/${listArchive.id}`} sx={{textDecoration: 'none'}}>
-                                                    <Button component={Link} to={`/market/showArchive/${listArchive.id}`} sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
+                                                    <ListItemButton component={Link} to={`/market/showArchive/${listArchive.id}`} sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
                                                         <ListItemText primary={
                                                             <React.Fragment>
                                                                 <Typography variant="inherit" textAlign="right" className="IRANSans" sx={{marginBottom: 1}}>
@@ -56,7 +56,7 @@ const Archives = () => {
                                                                           </React.Fragment>
                                                                       }
                                                         />
-                                                    </Button>
+                                                    </ListItemButton>
                                                 // </Link>
                                             ) : (
                                                 <ListItem
