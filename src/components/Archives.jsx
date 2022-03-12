@@ -5,7 +5,8 @@ import {db} from "./utilities/db";
 import Typography from "@mui/material/Typography";
 import ArchiveIcon from '@mui/icons-material/Archive';
 import Grid from "@mui/material/Grid";
-import {Link, List, ListItem, ListItemButton, Skeleton} from "@mui/material";
+import {List, ListItem, ListItemButton, Skeleton} from "@mui/material";
+import {Link} from "react-router-dom";
 import ListItemText from "@mui/material/ListItemText";
 import {getPersianDateTime} from "../utils/DateTimeUtils";
 
@@ -36,8 +37,8 @@ const Archives = () => {
                                     <Grid item xs={12} sm={6} md={4} xl={3} key={index}>
                                         {
                                             loaded ? (
-                                                <Link href={`/market/showArchive/${listArchive.id}`} sx={{textDecoration: 'none'}}>
-                                                    <ListItemButton sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
+                                                // <Link href={`/market/showArchive/${listArchive.id}`} sx={{textDecoration: 'none'}}>
+                                                    <ListItem component={Link} to={`/market/showArchive/${listArchive.id}`} sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
                                                         <ListItemText primary={
                                                             <React.Fragment>
                                                                 <Typography variant="inherit" textAlign="right" className="IRANSans" sx={{marginBottom: 1}}>
@@ -55,8 +56,8 @@ const Archives = () => {
                                                                           </React.Fragment>
                                                                       }
                                                         />
-                                                    </ListItemButton>
-                                                </Link>
+                                                    </ListItem>
+                                                // </Link>
                                             ) : (
                                                 <ListItem
                                                     sx={{border: 1, borderRadius: 1, borderColor: '#cdcdcd'}}>
