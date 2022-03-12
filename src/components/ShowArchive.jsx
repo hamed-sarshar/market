@@ -26,8 +26,6 @@ const ShowArchive = () => {
         }
     );
 
-    console.log(listArchive);
-
     return (
         <Container maxWidth="xl" sx={{mt: 1, mb: 3, pt: 2}}>
             {
