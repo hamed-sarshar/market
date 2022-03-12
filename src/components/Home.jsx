@@ -9,7 +9,6 @@ import {db} from "./utilities/db";
 const Home = () => {
     const {enqueueSnackbar} = useSnackbar();
 
-
     const handleOpenAddToCard = async (props) => {
         let imgSrc = props.imgSrc;
         let name = props.name;

@@ -7,7 +7,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Buys from "./components/Buys";
 import Archives from "./components/Archives";
 import ShowArchive from "./components/ShowArchive";
-import Test from "./components/Test"
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import {Zoom, Box, Fab} from "@mui/material";
@@ -60,13 +59,11 @@ export default function App(props) {
                 <NavBar/>
                 <span id="back-to-top-anchor"/>
                     <Routes>
-                        <Route path="/market/" element={<Home/>}/>
+                        <Route path="*" element={<NotFound/>}/>
+                        <Route index path="/market/" element={<Home/>}/>
                         <Route path="/market/buys" element={<Buys/>}/>
                         <Route path="/market/archives" element={<Archives/>}/>
                         <Route path="/market/showArchive/:idArchive" element={<ShowArchive/>}/>
-                        <Route path="/market/test" element={<Test/>}/>
-                        <Route path="/market/notFound" element={<NotFound/>}/>
-                        <Route path="*" element={<NotFound/>}/>
                     </Routes>
                 <Footer/>
                 <ScrollTop {...props}>
