@@ -27,7 +27,7 @@ const Home = () => {
     }
 
     return (
-        <Container maxWidth="xl" sx={{my: 3, pt: 2}}>
+        <Container maxWidth="xl" sx={{my: 3, pt: 2, pb: 6}}>
             <Box sx={{flexGrow: 1}}>
                 <Grid container spacing={{xs: 2, md: 3}}>
                     {ProductsList.map((productDetail, index) => (

@@ -66,7 +66,7 @@ const Buys = () => {
                     <Typography component="div" textAlign="center">
                         <Typography variant="h5" sx={{marginBottom: 1}}>در سبد خرید شما هیچ محصولی برای نمایش وجود
                             ندارد.</Typography>
-                        <RemoveShoppingCartIcon fontSize="large" color="action" style={{fontSize: "20rem"}}/>
+                        <RemoveShoppingCartIcon fontSize="large" color="action" style={{fontSize: "15rem"}}/>
                     </Typography>
                 ) : (
                     <React.Fragment>

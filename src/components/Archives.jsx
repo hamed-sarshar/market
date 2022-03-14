@@ -60,7 +60,7 @@ const Archives = () => {
             <ArchiveIcon
               fontSize="large"
               color="action"
-              style={{ fontSize: "20rem" }}
+              style={{ fontSize: "15rem" }}
             />
           </Typography>
         ) : (

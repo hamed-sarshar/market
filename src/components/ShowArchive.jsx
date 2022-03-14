@@ -31,7 +31,7 @@ const ShowArchive = () => {
                 listArchive === null ? (
                     <Typography component="div" textAlign="center">
                         <Typography variant="h5" sx={{marginBottom: 1}}>آرشیوی برای نمایش وجود ندارد </Typography>
-                        <ArchiveIcon fontSize="large" color="action" style={{fontSize: "20rem"}}/>
+                        <ArchiveIcon fontSize="large" color="action" style={{fontSize: "15rem"}}/>
                     </Typography>
                 ) : (
                     <React.Fragment>
