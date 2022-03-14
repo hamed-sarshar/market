@@ -5,7 +5,6 @@ import {useLiveQuery} from "dexie-react-hooks";
 import {db} from "./utilities/db";
 import ArchiveIcon from '@mui/icons-material/Archive';
 import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import {List, ListItemAvatar, Skeleton} from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
