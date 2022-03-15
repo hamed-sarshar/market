@@ -55,7 +55,7 @@ ScrollTop.propTypes = {
 export default function App(props) {
     return (
         <React.Fragment>
-            <SnackbarProvider maxSnack={2} autoHideDuration={1000}>
+            <SnackbarProvider maxSnack={2} autoHideDuration={1000} anchorOrigin={{vertical: 'top', horizontal: 'left'}}>
                 <NavBar/>
                 <span id="back-to-top-anchor"/>
                     <Routes>

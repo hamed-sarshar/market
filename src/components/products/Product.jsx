@@ -7,28 +7,20 @@ import { CardActions} from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
-import NoProduct from "../../images/product/noproduct.png"
-import {makeStyles} from "@mui/styles";
-
-const useStyles = makeStyles(() => ({
-    price: {
-        fontWeight: 'bolder'
-    },   
-}))
+import NoProduct from "../../images/product/noProduct.png"
 
 const Product = ({index, data, handleOpenAddToCard}) => {
-    const classes = useStyles();
 
     return (
-        <Card key={index}>
+        <Card className="boxProduct" key={index}>
                 <CardMedia
                     component="img"
-                    sx={{height: 220, margin: 'auto', width: '85%', objectFit: 'scale-down', padding:'.5rem'}}
+                    sx={{height: 220, width: '80%', margin: 'auto', objectFit: 'scale-down', padding:'.5rem'}}
                     image={data.imgSrc ? data.imgSrc : NoProduct}
                     alt={data.name}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="subtitle2" className="ellipsis-1" component="div">
+                    <Typography gutterBottom variant="subtitle2" className="ellipsis-2" component="div">
                         {data.name}
                     </Typography>
                     <Typography variant="caption" className="ellipsis-2 areaDescription" color="text.secondary">

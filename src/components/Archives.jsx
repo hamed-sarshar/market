@@ -51,7 +51,7 @@ const Archives = () => {
 
   return (
     <React.Fragment>
-      <Container maxWidth="xl" sx={{ my: 3, pt: 2 }}>
+      <Container maxWidth="xl" sx={{my: 3, pt: 2, pb: 6}}>
         {listArchives?.length === 0 ? (
           <Typography component="div" textAlign="center">
             <Typography variant="h5" sx={{ marginBottom: 1 }}>

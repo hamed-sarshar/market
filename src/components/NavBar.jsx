@@ -37,7 +37,7 @@ const NavBar = () => {
   };
   return (
     <React.Fragment>
-      <AppBar sx={{ position: { xs: "relative", md: "sticky" } }}>
+      <AppBar position="sticky">
         <Container maxWidth="xxl">
           <Toolbar disableGutters>
             <Typography sx={{ mx: 2, display: { xs: "none", md: "flex" }}}>

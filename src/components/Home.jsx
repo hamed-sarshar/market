@@ -29,9 +29,9 @@ const Home = () => {
     return (
         <Container maxWidth="xl" sx={{my: 3, pt: 2, pb: 6}}>
             <Box sx={{flexGrow: 1}}>
-                <Grid container spacing={{xs: 2, md: 3}}>
+                <Grid container>
                     {ProductsList.map((productDetail, index) => (
-                        <Grid item xs={6} sm={6} md={4} xl={3} key={index}>
+                        <Grid item xs={6} sm={6} md={4} xl={3} key={index} className="mainBoxProduct">
                             <Product key={index} data={productDetail} index={index} handleOpenAddToCard={handleOpenAddToCard}/>
                         </Grid>
                     ))}

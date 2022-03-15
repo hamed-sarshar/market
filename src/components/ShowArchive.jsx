@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import {List, ListItemAvatar, Skeleton} from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
-import NoProduct from "../images/product/noproduct.png";
+import NoProduct from "../images/product/noProduct.png";
 import ListItemText from "@mui/material/ListItemText";
 import {getPersianDateTime} from "../utils/DateTimeUtils";
 import Container from "@mui/material/Container";
@@ -26,7 +26,7 @@ const ShowArchive = () => {
     );
 
     return (
-        <Container maxWidth="xl" sx={{mt: 1, mb: 3, pt: 2}}>
+        <Container maxWidth="xl" sx={{my: 3, pt: 2, pb: 6}}>
             {
                 listArchive === null ? (
                     <Typography component="div" textAlign="center">

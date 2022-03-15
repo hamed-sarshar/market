@@ -8,7 +8,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import {List, ListItemAvatar, Skeleton} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
-import NoProduct from "../images/product/noproduct.png";
+import NoProduct from "../images/product/noProduct.png";
 import {useSnackbar} from "notistack";
 import {getPersianDateTime} from "../utils/DateTimeUtils";
 import {useLiveQuery} from "dexie-react-hooks";
@@ -60,7 +60,7 @@ const Buys = () => {
 
 
     return (
-        <Container maxWidth="xl" sx={{my: 3, pt: 2}}>
+        <Container maxWidth="xl" sx={{my: 3, pt: 2, pb: 6}}>
             {
                 listBuys?.length === 0 ? (
                     <Typography component="div" textAlign="center">
