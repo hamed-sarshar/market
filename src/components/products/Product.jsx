@@ -20,10 +20,10 @@ const Product = ({index, data, handleOpenAddToCard}) => {
                     alt={data.name}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="subtitle2" className="ellipsis-2" component="div">
+                    <Typography height={44} gutterBottom variant="subtitle2" className="ellipsis-2" component="div">
                         {data.name}
                     </Typography>
-                    <Typography variant="caption" className="ellipsis-2 areaDescription" color="text.secondary">
+                    <Typography height={44} variant="caption" className="ellipsis-2 areaDescription" color="text.secondary">
                         {data.title}
                     </Typography>
                 </CardContent>
