@@ -13,25 +13,25 @@ const Product = ({index, data, handleOpenAddToCard}) => {
 
     return (
         <Card className="boxProduct" key={index} sx={{display: {xs: "flex", sm: "block"}, flex: '1 0 auto'}}>
-                <Box sx={{width: {xs: "40%", sm: 'auto'}}}>
+                <Box sx={{width: {xs: "30%", sm: 'auto'}, display: {xs: 'flex', sm: 'block'}}}>
                     <CardMedia
                         component="img"
-                        sx={{height: 200, width: '80%', margin: 'auto' , objectFit: 'scale-down', padding:'.5rem'}}
+                        sx={{height: {xs: 100, sm: 200}, width: '80%', margin: 'auto' , objectFit: 'scale-down', padding:'.5rem'}}
                         image={data.imgSrc ? data.imgSrc : NoProduct}
                         alt={data.name}
                     />
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' , width: {xs: "60%", sm: 'auto'}}}>
-                    <CardContent>
-                        <Typography sx={{height: {xs: "auto", sm: 44 }}} gutterBottom variant="subtitle2" className="ellipsis-2" component="div">
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' , width: {xs: "70%", sm: 'auto'}}}>
+                    <CardContent sx={{padding: '8px 0'}}>
+                        <Typography sx={{height: {xs: "auto", sm: 44 }}} gutterBottom variant="body1" className="ellipsis-2" component="div">
                             {data.name}
                         </Typography>
-                        <Typography sx={{height: {xs: "auto", sm: 44 }}} variant="caption" className="ellipsis-2 areaDescription" color="text.secondary">
+                        <Typography sx={{height: {xs: "auto", sm: 44 }}} variant="caption" className="ellipsis-2" color="text.secondary">
                             {data.title}
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Grid container direction="row" justifyContent="space-around" alignItems="center"  >
+                        <Grid container direction="row" justifyContent="space-around" alignItems="center">
                             <Typography variant="string" className="price" color="text.secondary">
                                 {data.price.toLocaleString()}
                                 <Typography variant="caption"> تومان</Typography>
