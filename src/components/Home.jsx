@@ -31,7 +31,7 @@ const Home = () => {
             <Box sx={{flexGrow: 1}}>
                 <Grid container>
                     {ProductsList.map((productDetail, index) => (
-                        <Grid item xs={6} sm={6} md={4} xl={3} key={index} className="mainBoxProduct">
+                        <Grid item xs={12} sm={6} md={4} xl={3} key={index} className="mainBoxProduct">
                             <Product key={index} data={productDetail} index={index} handleOpenAddToCard={handleOpenAddToCard}/>
                         </Grid>
                     ))}
