@@ -22,7 +22,7 @@ const Product = ({index, data, handleOpenAddToCard}) => {
                     />
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignSelf: 'center' , width: {xs: "70%", sm: 'auto'}}}>
-                    <CardContent sx={{padding: {xs: '8px 0', sm: '1rem'}}}>
+                    <CardContent sx={{padding: {xs: '8px 0', sm: '0.4rem 1rem'}}}>
                         <Typography sx={{height: {xs: "auto", sm: 44 }}} gutterBottom variant="body1" className="ellipsis-2" component="div">
                             {data.name}
                         </Typography>
